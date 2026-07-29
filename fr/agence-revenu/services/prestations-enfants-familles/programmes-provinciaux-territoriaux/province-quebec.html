@@ -2,7 +2,7 @@
 layout: default
 title: "Province de Québec"
 description: "Renseignements concernant les programmes provinciaux administrés par l'Agence du revenu du Canada pour la province de Québec."
-subject: "Économie et industrie;Impôt"
+subject: ""
 keywords: "particulier, foire aux questions, Québec, prestation, programme provincial, famille, prestation fiscale canadienne pour enfants"
 auth:
   type: "contextual"
@@ -23,9 +23,10 @@ contextualFooter:
       url: "https://www.canada.ca/fr/agence-revenu/services/mettre-a-jour-renseignements-arc.html"
     - text: "À propos de l'ARC"
       url: "https://www.canada.ca/fr/agence-revenu/organisation/a-propos-agence-revenu-canada-arc.html"
-altLangPage: "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/provincial-territorial-programs/province-quebec.html"
-dateModified: 2023-12-12
-dateIssued: 2010-10-05
+robots: "index, follow"
+altLangPage: ""
+dateModified: 
+dateIssued: 
 breadcrumbs: # By default the Canada.ca crumbs is already set
   - title: "Impôts"
     link: "https://www.canada.ca/fr/services/impots.html"
@@ -37,7 +38,7 @@ feedbackData:
   section: "Province de Québec"
 notedlinks:
   - title: "Province de Québec"
-    link: "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/programmes-provinciaux-territoriaux/province-quebec.html"
+    link: "http://cra-ut.isvcs.net/test/aida/test-topic-page-2026/fr/agence-revenu/services/prestations-enfants-familles/programmes-provinciaux-territoriaux/province-quebec.html"
   - title: "Repository sitemap"
     link: "https://cra-proto.github.io/test-topic-page-2026/index.html"
 ---
@@ -59,5 +60,59 @@ notedlinks:
 </div>
 <h2>Allocation famille</h2>
 <p>L'<a href="https://www.rrq.gouv.qc.ca/fr/enfants/naissance/paiement_soutien_enfants/Pages/paiement_soutien_enfants.aspx">Allocation famille</a> est une aide financière versée à toutes les familles admissibles qui ont un enfant de moins de 18 ans à leur charge. Au Québec, un parent n'a pas à faire de demande pour recevoir l'Allocation famille. En déclarant une naissance au Directeur de l'état civil, il inscrit automatiquement son enfant à cette mesure. Pour en savoir plus, consultez le site de <a href="http://www.rrq.gouv.qc.ca/fr/enfants/">Retraite Québec</a>.</p>
+<div id="def-preFooter">
+    <!-- Write closure fall-back static file -->
+    <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_43/cdts/static/preFooter-fr.html -->
+    <!--#include virtual="/app/cls/WET/gcweb/v4_0_43/cdts/static/preFooter-fr.html" -->
+</div>
 
-<script>_satellite.pageBottom();</script>
+<script>
+            var defTop = document.getElementById("def-top");
+            defTop.outerHTML = wet.builder.top({
+                lngLinks: [{
+                    lang: "en", 
+                    href: "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/provincial-territorial-programs/province-quebec.html", 
+                    text: "English"
+                }], 
+                customSearch: [{
+                    action: "https://www.canada.ca/fr/agence-revenu/recherche.html", 
+                    placeholder: "ARC", 
+                    method: "get", 
+                }], 
+                auth: [{
+                    type: "contextual", 
+                    label: "Se connecter", 
+                    labelExtended: "Se connecter à l'ARC", 
+                    link: "https://www.canada.ca/fr/agence-revenu/services/services-electroniques/services-ouverture-session-arc.html"
+                }], 
+                breadcrumbs: [{ title: "Canada.ca", href: "https://www.canada.ca/fr.html" }, { title: "Impôts", href: "https://www.canada.ca/fr/services/impots.html" }, { title: "Crédits d’impôt et prestations pour les particuliers", href: "https://www.canada.ca/fr/services/impots/prestations-pour-enfants-et-familles.html" }, { title: "Programmes provinciaux et territoriaux", href: "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/programmes-provinciaux-territoriaux.html" }]
+            });
+        </script>
+<script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                showShare: false, 
+                pagedetails: false
+            });
+        </script>
+<script>
+            var defFooter = document.getElementById("def-footer");
+            defFooter.outerHTML = wet.builder.footer({
+                privacyLink: {
+                    href: "https://www.canada.ca/fr/agence-revenu/organisation/avis-confidentialite.html"
+                }, 
+                contextualFooter: {
+                    title: "Agence du revenu du Canada (ARC)", 
+                    links: [{
+                        text: "Contacter l'ARC", 
+                        href: "https://www.canada.ca/fr/agence-revenu/organisation/coordonnees.html"
+                    }, {
+                        text: "Mettre à jour vos renseignements", 
+                        href: "https://www.canada.ca/fr/agence-revenu/services/mettre-a-jour-renseignements-arc.html"
+                    }, {
+                        text: "À propos de l'ARC", 
+                        href: "https://www.canada.ca/fr/agence-revenu/organisation/a-propos-agence-revenu-canada-arc.html"
+                    }]
+                }
+            });
+        </script>
