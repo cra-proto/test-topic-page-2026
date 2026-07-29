@@ -1,8 +1,8 @@
 ---
-layout: without-h1
-title: "Prestation pour enfants handicapés"
+layout: default
+title: "Prestation pour enfants handicapés (PEH)"
 description: "Fournit des liens à des renseignements aux particuliers sur la prestation pour enfants handicapés (PEH) tels que l'admissibilité, le calcul et les versements."
-subject: "Économie et industrie;Impôt"
+subject: ""
 keywords: "particulier, liste de référence, crédit d'impôt pour personnes handicapées, T2201, T778, montant pour personnes handicapées, allocation canadienne pour enfants, Allocations spéciales pour enfants, programme de prestations, famille, prestation pour enfants handicapés"
 auth:
   type: "contextual"
@@ -23,9 +23,10 @@ contextualFooter:
       url: "https://www.canada.ca/fr/agence-revenu/services/mettre-a-jour-renseignements-arc.html"
     - text: "À propos de l'ARC"
       url: "https://www.canada.ca/fr/agence-revenu/organisation/a-propos-agence-revenu-canada-arc.html"
-altLangPage: "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/child-disability-benefit.html"
-dateModified: 2026-06-15
-dateIssued: 2008-09-11
+robots: "index, follow"
+altLangPage: ""
+dateModified: 
+dateIssued: 
 breadcrumbs: # By default the Canada.ca crumbs is already set
   - title: "Impôts"
     link: "https://www.canada.ca/fr/services/impots.html"
@@ -34,16 +35,15 @@ breadcrumbs: # By default the Canada.ca crumbs is already set
   - title: "Aperçu des prestations pour enfants et familles"
     link: "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles.html"
 feedbackData:
-  section: "Prestation pour enfants handicapés"
+  section: "Prestation pour enfants handicapés (PEH)"
 notedlinks:
-  - title: "Prestation pour enfants handicapés"
-    link: "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/prestation-enfants-handicapes.html"
+  - title: "Prestation pour enfants handicapés (PEH)"
+    link: "http://cra-ut.isvcs.net/test/aida/test-topic-page-2026/fr/agence-revenu/services/prestations-enfants-familles/prestation-enfants-handicapes.html"
   - title: "Repository sitemap"
     link: "https://cra-proto.github.io/test-topic-page-2026/index.html"
 ---
 
 
-<h1 property="name" id="wb-cont" dir="ltr">Prestation pour enfants handicapés (PEH)</h1>
 <section data-ajax-replace="https://www.canada.ca/content/dam/cra-arc/includes/generic_disruption.txt#disruption-fr"></section>
 <section data-ajax-replace="https://www.canada.ca/content/dam/cra-arc/includes/strike.txt#fr"></section>
 <aside>
@@ -102,5 +102,59 @@ notedlinks:
     <li><a href="https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/allocation-canadienne-enfants-apercu/montant-versements-allocation-canadienne-enfants-juillet-2016-a-juin-2018-annees-imposition-2015-2016.html">Montant des versements (années de base 2021-2023)</a></li>
 </ul>
 <section data-ajax-replace="https://www.canada.ca/content/dam/cra-arc/includes/rights_obligations.txt#understand-fra"></section>
+<div id="def-preFooter">
+    <!-- Write closure fall-back static file -->
+    <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_43/cdts/static/preFooter-fr.html -->
+    <!--#include virtual="/app/cls/WET/gcweb/v4_0_43/cdts/static/preFooter-fr.html" -->
+</div>
 
-<script>_satellite.pageBottom();</script>
+<script>
+            var defTop = document.getElementById("def-top");
+            defTop.outerHTML = wet.builder.top({
+                lngLinks: [{
+                    lang: "en", 
+                    href: "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/child-disability-benefit.html", 
+                    text: "English"
+                }], 
+                customSearch: [{
+                    action: "https://www.canada.ca/fr/agence-revenu/recherche.html", 
+                    placeholder: "ARC", 
+                    method: "get", 
+                }], 
+                auth: [{
+                    type: "contextual", 
+                    label: "Se connecter", 
+                    labelExtended: "Se connecter à l'ARC", 
+                    link: "https://www.canada.ca/fr/agence-revenu/services/services-electroniques/services-ouverture-session-arc.html"
+                }], 
+                breadcrumbs: [{ title: "Canada.ca", href: "https://www.canada.ca/fr.html" }, { title: "Impôts", href: "https://www.canada.ca/fr/services/impots.html" }, { title: "Crédits d’impôt et prestations pour les particuliers", href: "https://www.canada.ca/fr/services/impots/prestations-pour-enfants-et-familles.html" }, { title: "Aperçu des prestations pour enfants et familles", href: "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles.html" }]
+            });
+        </script>
+<script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                showShare: false, 
+                pagedetails: false
+            });
+        </script>
+<script>
+            var defFooter = document.getElementById("def-footer");
+            defFooter.outerHTML = wet.builder.footer({
+                privacyLink: {
+                    href: "https://www.canada.ca/fr/agence-revenu/organisation/avis-confidentialite.html"
+                }, 
+                contextualFooter: {
+                    title: "Agence du revenu du Canada (ARC)", 
+                    links: [{
+                        text: "Contacter l'ARC", 
+                        href: "https://www.canada.ca/fr/agence-revenu/organisation/coordonnees.html"
+                    }, {
+                        text: "Mettre à jour vos renseignements", 
+                        href: "https://www.canada.ca/fr/agence-revenu/services/mettre-a-jour-renseignements-arc.html"
+                    }, {
+                        text: "À propos de l'ARC", 
+                        href: "https://www.canada.ca/fr/agence-revenu/organisation/a-propos-agence-revenu-canada-arc.html"
+                    }]
+                }
+            });
+        </script>
