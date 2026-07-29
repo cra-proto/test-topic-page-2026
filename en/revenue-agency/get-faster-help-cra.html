@@ -9,9 +9,10 @@ auth:
   label: "Sign in"
   labelExtended: "CRA sign in"
   link: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
-altLangPage: "https://www.canada.ca/fr/agence-revenu/arc-offre-aide-rapide.html"
-dateModified: 2026-06-03
-dateIssued: 2025-08-13
+robots: "index, follow"
+altLangPage: ""
+dateModified: 
+dateIssued: 
 breadcrumbs: # By default the Canada.ca crumbs is already set
   - title: "Canada Revenue Agency (CRA)"
     link: "https://www.canada.ca/en/revenue-agency.html"
@@ -19,7 +20,7 @@ feedbackData:
   section: "Skip the Line – Get faster help from the CRA"
 notedlinks:
   - title: "Skip the Line – Get faster help from the CRA"
-    link: "https://www.canada.ca/en/revenue-agency/get-faster-help-cra.html"
+    link: "http://cra-ut.isvcs.net/test/aida/test-topic-page-2026/en/revenue-agency/get-faster-help-cra.html"
   - title: "Repository sitemap"
     link: "https://cra-proto.github.io/test-topic-page-2026/index.html"
 ---
@@ -36,30 +37,6 @@ notedlinks:
         <li><a href="#toc3">Facts behind the service</a></li>
     </ul>
 </nav>
-<script type="text/javascript">
-    //window.onload is needed otherwise it doesnot scan whole document but upto the component area only new version
-    window.onload = function() {
-        var hTags = ['H2','H2','H2','H2'];
-        var hText = ['Find answers to common questions regarding benefit and credit payments','Use digital services first','Know before you call','Facts behind the service'];
-        if(typeof hTags != 'undefined' && hTags != null){
-            for(var i = 0; i < hTags.length; i++){
-                var tags = document.querySelectorAll(hTags[i].toLowerCase());
-    if(typeof tags != 'undefined' && tags != null){
-                    for(var j = 0; j < tags.length; j++){
-                       // mws-1900 - the heading from texts contains contains text without backslash before appostraphy, where as tags returned by query selector does not contain them
-                        // hence removing backslash for creating equal comparison in order to add id reference
-                        if(tags[j].textContent.trim() === hText[i].replace(/\\/g, '')) {
-    			if(!tags[j].id) {
-    				tags[j].setAttribute('id', 'toc'+i);
-    				break;
-    			}
-                        }
-                    }
-                }
-            }
-        }
-    };
-</script>
 <h2>Find answers to common questions regarding benefit and credit payments</h2>
 <p>Did you know that many of the reasons people call the CRA can be resolved quickly and conveniently using our self-serve digital options?</p>
 <p>To serve you better, we’ll be closely monitoring the top benefit and credit call drivers and updating this section periodically. By highlighting the most common reasons people call and showcasing how to resolve them online, we aim to help you skip the line and to quickly get the answers you need.</p>
@@ -241,36 +218,83 @@ notedlinks:
 <div class="well well-sm">
     <p><strong>Fact:</strong> The CRA handles more than 30 million calls annually, 80 percent are related to individual accounts. The Quality Monitoring Program reviews 100,000+ calls yearly, with the latest findings showing we have results of over 90 percent for professional and efficient service, as well as for accurate information provided. We are working to address the accuracy issues raised by the Auditor General for questions of a general nature, which make up 20 percent of our calls.</p>
 </div>
+<div id="def-preFooter">
+    <!-- Write closure fall-back static file -->
+    <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_43/cdts/static/preFooter-en.html -->
+    <!--#include virtual="/app/cls/WET/gcweb/v4_0_43/cdts/static/preFooter-en.html" -->
+</div>
 
 <script>
-
+            var defTop = document.getElementById("def-top");
+            defTop.outerHTML = wet.builder.top({
+                lngLinks: [{
+                    lang: "fr", 
+                    href: "https://www.canada.ca/fr/agence-revenu/arc-offre-aide-rapide.html", 
+                    text: "Français"
+                }], 
+                customSearch: [{
+                    action: "https://www.canada.ca/en/revenue-agency/search.html", 
+                    placeholder: "CRA", 
+                    method: "get", 
+                }], 
+                auth: [{
+                    type: "contextual", 
+                    label: "sign in", 
+                    labelExtended: "CRA sign in", 
+                    link: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
+                }], 
+                breadcrumbs: [{ title: "Canada.ca", href: "https://www.canada.ca/en.html" }, { title: "Canada Revenue Agency (CRA)", href: "https://www.canada.ca/en/revenue-agency.html" }]
+            });
+        </script>
+<script>
     //window.onload is needed otherwise it doesnot scan whole document but upto the component area only new version
     window.onload = function() {
-
         var hTags = ['H2','H2','H2','H2'];
         var hText = ['Find answers to common questions regarding benefit and credit payments','Use digital services first','Know before you call','Facts behind the service'];
-
         if(typeof hTags != 'undefined' && hTags != null){
             for(var i = 0; i < hTags.length; i++){
                 var tags = document.querySelectorAll(hTags[i].toLowerCase());
-                
-				if(typeof tags != 'undefined' && tags != null){
+    if(typeof tags != 'undefined' && tags != null){
                     for(var j = 0; j < tags.length; j++){
                        // mws-1900 - the heading from texts contains contains text without backslash before appostraphy, where as tags returned by query selector does not contain them
                         // hence removing backslash for creating equal comparison in order to add id reference
                         if(tags[j].textContent.trim() === hText[i].replace(/\\/g, '')) {
-							if(!tags[j].id) {
-								tags[j].setAttribute('id', 'toc'+i);
-								break;
-							}
+    			if(!tags[j].id) {
+    				tags[j].setAttribute('id', 'toc'+i);
+    				break;
+    			}
                         }
                     }
                 }
             }
         }
-
     };
-
-
 </script>
-<script>_satellite.pageBottom();</script>
+<script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                showShare: false, 
+                pagedetails: false
+            });
+        </script>
+<script>
+            var defFooter = document.getElementById("def-footer");
+            defFooter.outerHTML = wet.builder.footer({
+                privacyLink: {
+                    href: "https://www.canada.ca/en/revenue-agency/corporate/privacy-notice.html"
+                }, 
+                contextualFooter: {
+                    title: "Canada Revenue Agency (CRA)", 
+                    links: [{
+                        text: "Contact the CRA", 
+                        href: "https://www.canada.ca/en/revenue-agency/corporate/contact-information.html"
+                    }, {
+                        text: "Update your information", 
+                        href: "https://www.canada.ca/en/revenue-agency/services/update-information-cra.html"
+                    }, {
+                        text: "About the CRA", 
+                        href: "https://www.canada.ca/en/revenue-agency/corporate/about-canada-revenue-agency-cra.html"
+                    }]
+                }
+            });
+        </script>
