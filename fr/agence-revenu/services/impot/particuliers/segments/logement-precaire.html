@@ -1,5 +1,5 @@
 ---
-layout: without-h1
+layout: default
 title: "Personnes en situation de logement précaire et l’ARC"
 description: ""
 subject: ""
@@ -23,9 +23,10 @@ contextualFooter:
       url: "https://www.canada.ca/fr/agence-revenu/services/mettre-a-jour-renseignements-arc.html"
     - text: "À propos de l'ARC"
       url: "https://www.canada.ca/fr/agence-revenu/organisation/a-propos-agence-revenu-canada-arc.html"
-altLangPage: "https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/housing-insecurity.html"
-dateModified: 2026-07-06
-dateIssued: 2025-09-10
+robots: "index, follow"
+altLangPage: ""
+dateModified: 
+dateIssued: 
 breadcrumbs: # By default the Canada.ca crumbs is already set
   - title: "Agence du revenu du Canada (ARC)"
     link: "https://www.canada.ca/fr/agence-revenu.html"
@@ -33,7 +34,7 @@ feedbackData:
   section: "Personnes en situation de logement précaire et l’ARC"
 notedlinks:
   - title: "Personnes en situation de logement précaire et l’ARC"
-    link: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/segments/logement-precaire.html"
+    link: "http://cra-ut.isvcs.net/test/aida/test-topic-page-2026/fr/agence-revenu/services/impot/particuliers/segments/logement-precaire.html"
   - title: "Repository sitemap"
     link: "https://cra-proto.github.io/test-topic-page-2026/index.html"
 ---
@@ -43,7 +44,6 @@ notedlinks:
     <div class="container">
         <div class="row">
             <div class="well header-rwd mrgn-tp-lg">
-                <h1 property="name" id="wb-cont">Personnes en situation de logement précaire et l’ARC</h1>
                 <p class="mrgn-bttm-xl">L’Agence du revenu du Canada (ARC) offre un soutien financier au moyen de prestations, crédits, et programmes.</p>
             </div>
         </div>
@@ -584,5 +584,59 @@ notedlinks:
         <li><a href="https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/segments/particuliers-revenu-modeste.html">Particuliers à revenu modeste</a></li>
     </ul>
 </div>
+<div id="def-preFooter">
+    <!-- Write closure fall-back static file -->
+    <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_43/cdts/static/preFooter-fr.html -->
+    <!--#include virtual="/app/cls/WET/gcweb/v4_0_43/cdts/static/preFooter-fr.html" -->
+</div>
 
-<script>_satellite.pageBottom();</script>
+<script>
+            var defTop = document.getElementById("def-top");
+            defTop.outerHTML = wet.builder.top({
+                lngLinks: [{
+                    lang: "en", 
+                    href: "https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/housing-insecurity.html", 
+                    text: "English"
+                }], 
+                customSearch: [{
+                    action: "https://www.canada.ca/fr/agence-revenu/recherche.html", 
+                    placeholder: "ARC", 
+                    method: "get", 
+                }], 
+                auth: [{
+                    type: "contextual", 
+                    label: "Se connecter", 
+                    labelExtended: "Se connecter à l'ARC", 
+                    link: "https://www.canada.ca/fr/agence-revenu/services/services-electroniques/services-ouverture-session-arc.html"
+                }], 
+                breadcrumbs: [{ title: "Canada.ca", href: "https://www.canada.ca/fr.html" }, { title: "Agence du revenu du Canada (ARC)", href: "https://www.canada.ca/fr/agence-revenu.html" }]
+            });
+        </script>
+<script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                showShare: false, 
+                pagedetails: false
+            });
+        </script>
+<script>
+            var defFooter = document.getElementById("def-footer");
+            defFooter.outerHTML = wet.builder.footer({
+                privacyLink: {
+                    href: "https://www.canada.ca/fr/agence-revenu/organisation/avis-confidentialite.html"
+                }, 
+                contextualFooter: {
+                    title: "Agence du revenu du Canada (ARC)", 
+                    links: [{
+                        text: "Contacter l'ARC", 
+                        href: "https://www.canada.ca/fr/agence-revenu/organisation/coordonnees.html"
+                    }, {
+                        text: "Mettre à jour vos renseignements", 
+                        href: "https://www.canada.ca/fr/agence-revenu/services/mettre-a-jour-renseignements-arc.html"
+                    }, {
+                        text: "À propos de l'ARC", 
+                        href: "https://www.canada.ca/fr/agence-revenu/organisation/a-propos-agence-revenu-canada-arc.html"
+                    }]
+                }
+            });
+        </script>
