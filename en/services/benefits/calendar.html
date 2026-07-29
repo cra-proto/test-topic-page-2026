@@ -1,17 +1,18 @@
 ---
-layout: no-container
+layout: default
 title: "Benefits payment dates"
 description: "Official 2025 and 2026 payment dates for benefits and tax credits administered by Service Canada and Canada Revenue Agency (CRA)"
-subject: "Benefits"
+subject: ""
 keywords: ""
 auth:
   type: "contextual"
   label: "Sign in"
   labelExtended: "CRA sign in"
   link: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
-altLangPage: "https://www.canada.ca/fr/services/prestations/calendrier.html"
-dateModified: 2026-06-12
-dateIssued: 2015-05-06
+robots: "index, follow"
+altLangPage: ""
+dateModified: 
+dateIssued: 
 breadcrumbs: # By default the Canada.ca crumbs is already set
   - title: "Benefits"
     link: "https://www.canada.ca/en/services/benefits.html"
@@ -19,14 +20,13 @@ feedbackData:
   section: "Benefits payment dates"
 notedlinks:
   - title: "Benefits payment dates"
-    link: "https://www.canada.ca/en/services/benefits/calendar.html"
+    link: "http://cra-ut.isvcs.net/test/aida/test-topic-page-2026/en/services/benefits/calendar.html"
   - title: "Repository sitemap"
     link: "https://cra-proto.github.io/test-topic-page-2026/index.html"
 ---
 
 
 <section class="container">
-    <h1 property="name" id="wb-cont">Benefits payment dates</h1>
     <div class="row profile">
         <div class="col-md-12">
             <!--start of Alert row-->
@@ -633,5 +633,59 @@ notedlinks:
      "accessToken": "xx27395007-5c98-43c0-bef0-553131a34e90"
 }'
 ></div>
+<div id="def-preFooter">
+    <!-- Write closure fall-back static file -->
+    <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_43/cdts/static/preFooter-en.html -->
+    <!--#include virtual="/app/cls/WET/gcweb/v4_0_43/cdts/static/preFooter-en.html" -->
+</div>
 
-<script>_satellite.pageBottom();</script>
+<script>
+            var defTop = document.getElementById("def-top");
+            defTop.outerHTML = wet.builder.top({
+                lngLinks: [{
+                    lang: "fr", 
+                    href: "https://www.canada.ca/fr/services/prestations/calendrier.html", 
+                    text: "Français"
+                }], 
+                customSearch: [{
+                    action: "https://www.canada.ca/en/revenue-agency/search.html", 
+                    placeholder: "CRA", 
+                    method: "get", 
+                }], 
+                auth: [{
+                    type: "contextual", 
+                    label: "sign in", 
+                    labelExtended: "CRA sign in", 
+                    link: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
+                }], 
+                breadcrumbs: [{ title: "Canada.ca", href: "https://www.canada.ca/en.html" }, { title: "Benefits", href: "https://www.canada.ca/en/services/benefits.html" }]
+            });
+        </script>
+<script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                showShare: false, 
+                pagedetails: false
+            });
+        </script>
+<script>
+            var defFooter = document.getElementById("def-footer");
+            defFooter.outerHTML = wet.builder.footer({
+                privacyLink: {
+                    href: "https://www.canada.ca/en/revenue-agency/corporate/privacy-notice.html"
+                }, 
+                contextualFooter: {
+                    title: "Canada Revenue Agency (CRA)", 
+                    links: [{
+                        text: "Contact the CRA", 
+                        href: "https://www.canada.ca/en/revenue-agency/corporate/contact-information.html"
+                    }, {
+                        text: "Update your information", 
+                        href: "https://www.canada.ca/en/revenue-agency/services/update-information-cra.html"
+                    }, {
+                        text: "About the CRA", 
+                        href: "https://www.canada.ca/en/revenue-agency/corporate/about-canada-revenue-agency-cra.html"
+                    }]
+                }
+            });
+        </script>
