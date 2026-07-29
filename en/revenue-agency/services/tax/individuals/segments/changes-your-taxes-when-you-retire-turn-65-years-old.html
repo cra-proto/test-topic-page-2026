@@ -2,16 +2,17 @@
 layout: default
 title: "Taxes when you retire or turn 65 years old"
 description: "Information for seniors on topics such as common credits, types of income, pension income splitting, filing a return and RRSP options."
-subject: "Economics and Industry;Taxes"
+subject: ""
 keywords: "Individuals, senior, seniors, retired, retiree, old age security, OAS, guaranteed income supplement, snowbird, P119, 65 years, pension income splitting, reduce tax, defer tax, retirement allowance"
 auth:
   type: "contextual"
   label: "Sign in"
   labelExtended: "CRA sign in"
   link: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
-altLangPage: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/segments/changements-a-vos-impots-quand-vous-prenez-votre-retraite-lorsque-vous-atteignez-65-ans.html"
-dateModified: 2024-01-23
-dateIssued: 2017-06-22
+robots: "index, follow"
+altLangPage: ""
+dateModified: 
+dateIssued: 
 breadcrumbs: # By default the Canada.ca crumbs is already set
   - title: "Taxes"
     link: "https://www.canada.ca/en/services/taxes.html"
@@ -23,7 +24,7 @@ feedbackData:
   section: "Taxes when you retire or turn 65 years old"
 notedlinks:
   - title: "Taxes when you retire or turn 65 years old"
-    link: "https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/changes-your-taxes-when-you-retire-turn-65-years-old.html"
+    link: "http://cra-ut.isvcs.net/test/aida/test-topic-page-2026/en/revenue-agency/services/tax/individuals/segments/changes-your-taxes-when-you-retire-turn-65-years-old.html"
   - title: "Repository sitemap"
     link: "https://cra-proto.github.io/test-topic-page-2026/index.html"
 ---
@@ -179,5 +180,59 @@ notedlinks:
     <li><a href="https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/individuals-leaving-entering-canada-non-residents.html">Individuals – Leaving or entering Canada and non-residents</a></li>
     <li><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-45355-mhrtc.html">Multigenerational home renovation tax credit (MHRTC)</a></li>
 </ul>
+<div id="def-preFooter">
+    <!-- Write closure fall-back static file -->
+    <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_43/cdts/static/preFooter-en.html -->
+    <!--#include virtual="/app/cls/WET/gcweb/v4_0_43/cdts/static/preFooter-en.html" -->
+</div>
 
-<script>_satellite.pageBottom();</script>
+<script>
+            var defTop = document.getElementById("def-top");
+            defTop.outerHTML = wet.builder.top({
+                lngLinks: [{
+                    lang: "fr", 
+                    href: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/segments/changements-a-vos-impots-quand-vous-prenez-votre-retraite-lorsque-vous-atteignez-65-ans.html", 
+                    text: "Français"
+                }], 
+                customSearch: [{
+                    action: "https://www.canada.ca/en/revenue-agency/search.html", 
+                    placeholder: "CRA", 
+                    method: "get", 
+                }], 
+                auth: [{
+                    type: "contextual", 
+                    label: "sign in", 
+                    labelExtended: "CRA sign in", 
+                    link: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
+                }], 
+                breadcrumbs: [{ title: "Canada.ca", href: "https://www.canada.ca/en.html" }, { title: "Taxes", href: "https://www.canada.ca/en/services/taxes.html" }, { title: "Income tax", href: "https://www.canada.ca/en/services/taxes/income-tax.html" }, { title: "Personal income tax", href: "https://www.canada.ca/en/services/taxes/income-tax/personal-income-tax.html" }]
+            });
+        </script>
+<script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                showShare: false, 
+                pagedetails: false
+            });
+        </script>
+<script>
+            var defFooter = document.getElementById("def-footer");
+            defFooter.outerHTML = wet.builder.footer({
+                privacyLink: {
+                    href: "https://www.canada.ca/en/revenue-agency/corporate/privacy-notice.html"
+                }, 
+                contextualFooter: {
+                    title: "Canada Revenue Agency (CRA)", 
+                    links: [{
+                        text: "Contact the CRA", 
+                        href: "https://www.canada.ca/en/revenue-agency/corporate/contact-information.html"
+                    }, {
+                        text: "Update your information", 
+                        href: "https://www.canada.ca/en/revenue-agency/services/update-information-cra.html"
+                    }, {
+                        text: "About the CRA", 
+                        href: "https://www.canada.ca/en/revenue-agency/corporate/about-canada-revenue-agency-cra.html"
+                    }]
+                }
+            });
+        </script>
