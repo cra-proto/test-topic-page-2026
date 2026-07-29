@@ -1,6 +1,6 @@
 ---
-layout: without-h1
-title: "Évitez l’attente : obtenez l’aide de l’ARC plus rapidement"
+layout: default
+title: "Évitez l’attente : obtenez l’aide de l’ARC plus rapidement"
 description: ""
 subject: ""
 keywords: ""
@@ -23,23 +23,23 @@ contextualFooter:
       url: "https://www.canada.ca/fr/agence-revenu/services/mettre-a-jour-renseignements-arc.html"
     - text: "À propos de l'ARC"
       url: "https://www.canada.ca/fr/agence-revenu/organisation/a-propos-agence-revenu-canada-arc.html"
-altLangPage: "https://www.canada.ca/en/revenue-agency/get-faster-help-cra.html"
-dateModified: 2026-06-03
-dateIssued: 2025-08-13
+robots: "index, follow"
+altLangPage: ""
+dateModified: 
+dateIssued: 
 breadcrumbs: # By default the Canada.ca crumbs is already set
   - title: "Agence du revenu du Canada (ARC)"
     link: "https://www.canada.ca/fr/agence-revenu.html"
 feedbackData:
-  section: "Évitez l’attente : obtenez l’aide de l’ARC plus rapidement"
+  section: "Évitez l’attente : obtenez l’aide de l’ARC plus rapidement"
 notedlinks:
-  - title: "Évitez l’attente : obtenez l’aide de l’ARC plus rapidement"
-    link: "https://www.canada.ca/fr/agence-revenu/arc-offre-aide-rapide.html"
+  - title: "Évitez l’attente : obtenez l’aide de l’ARC plus rapidement"
+    link: "http://cra-ut.isvcs.net/test/aida/test-topic-page-2026/fr/agence-revenu/arc-offre-aide-rapide.html"
   - title: "Repository sitemap"
     link: "https://cra-proto.github.io/test-topic-page-2026/index.html"
 ---
 
 
-<h1 property="name" id="wb-cont" dir="ltr">Évitez <span class="nowrap">l’attente&nbsp;:</span> obtenez l’aide de l’ARC plus rapidement</h1>
 <p>À l’Agence du revenu du Canada (ARC), nous croyons que vous devriez pouvoir trouver facilement les renseignements dont vous avez besoin, sans avoir à attendre au téléphone. C’est pourquoi nous avons créé des services numériques sécurisés qui répondent à la plupart de vos questions en quelques minutes.</p>
 <p>Cette page vous indique où trouver les réponses à vos questions sans avoir à nous appeler et ce à quoi vous pouvez vous attendre lorsque vous communiquez avec nous.</p>
 <nav role="navigation">
@@ -51,30 +51,6 @@ notedlinks:
         <li><a href="#toc3">Données clés sur nos services</a></li>
     </ul>
 </nav>
-<script type="text/javascript">
-    //window.onload is needed otherwise it doesnot scan whole document but upto the component area only new version
-    window.onload = function() {
-        var hTags = ['H2','H2','H2','H2'];
-        var hText = ['Trouvez les r\u00E9ponses aux questions les plus courantes sur les prestations et les cr\u00E9dits en ligne','Utilisez d\u2019abord nos services num\u00E9riques','Ce que vous devez savoir avant de nous appeler','Donn\u00E9es cl\u00E9s sur nos services'];
-        if(typeof hTags != 'undefined' && hTags != null){
-            for(var i = 0; i < hTags.length; i++){
-                var tags = document.querySelectorAll(hTags[i].toLowerCase());
-    if(typeof tags != 'undefined' && tags != null){
-                    for(var j = 0; j < tags.length; j++){
-                       // mws-1900 - the heading from texts contains contains text without backslash before appostraphy, where as tags returned by query selector does not contain them
-                        // hence removing backslash for creating equal comparison in order to add id reference
-                        if(tags[j].textContent.trim() === hText[i].replace(/\\/g, '')) {
-    			if(!tags[j].id) {
-    				tags[j].setAttribute('id', 'toc'+i);
-    				break;
-    			}
-                        }
-                    }
-                }
-            }
-        }
-    };
-</script>
 <h2>Trouvez les réponses aux questions les plus courantes sur les prestations et les crédits en ligne</h2>
 <p>Saviez-vous que la plupart des problèmes pour lesquels les gens appellent l’ARC peuvent être réglés rapidement et de manière autonome au moyen des options de libre-service numériques?</p>
 <p>Pour mieux vous servir, nous surveillerons de près les principales raisons pour lesquelles on nous appel liés aux prestations et aux crédits et mettrons régulièrement cette section à jour. En mettant en évidence les problèmes les plus courants pour lesquels les gens nous appellent et en présentant la façon de les régler en ligne, nous pourrions vous aider à éviter l’attente et à obtenir rapidement les réponses dont vous avez besoin.</p>
@@ -256,36 +232,83 @@ notedlinks:
 <div class="well well-sm">
     <p><strong>Réalité</strong>&nbsp;: Nous recevons plus de 30 millions d’appels chaque année, dont 80 % concernent les comptes des particuliers. Plus de 100 000 appels font l’objet d’un examen par le Programme de surveillance de la qualité chaque année. Les résultats les plus récents indiquent un taux supérieur à 90 % pour la qualité des services offerts, qui sont professionnels et efficaces, ainsi que pour l’exactitude des renseignements communiqués. Nous travaillons à corriger les problèmes d’exactitude soulevés par la vérificatrice générale concernant les questions d’ordre général, qui représentent 20 % de nos appels.</p>
 </div>
+<div id="def-preFooter">
+    <!-- Write closure fall-back static file -->
+    <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_43/cdts/static/preFooter-fr.html -->
+    <!--#include virtual="/app/cls/WET/gcweb/v4_0_43/cdts/static/preFooter-fr.html" -->
+</div>
 
 <script>
-
+            var defTop = document.getElementById("def-top");
+            defTop.outerHTML = wet.builder.top({
+                lngLinks: [{
+                    lang: "en", 
+                    href: "https://www.canada.ca/en/revenue-agency/get-faster-help-cra.html", 
+                    text: "English"
+                }], 
+                customSearch: [{
+                    action: "https://www.canada.ca/fr/agence-revenu/recherche.html", 
+                    placeholder: "ARC", 
+                    method: "get", 
+                }], 
+                auth: [{
+                    type: "contextual", 
+                    label: "Se connecter", 
+                    labelExtended: "Se connecter à l'ARC", 
+                    link: "https://www.canada.ca/fr/agence-revenu/services/services-electroniques/services-ouverture-session-arc.html"
+                }], 
+                breadcrumbs: [{ title: "Canada.ca", href: "https://www.canada.ca/fr.html" }, { title: "Agence du revenu du Canada (ARC)", href: "https://www.canada.ca/fr/agence-revenu.html" }]
+            });
+        </script>
+<script>
     //window.onload is needed otherwise it doesnot scan whole document but upto the component area only new version
     window.onload = function() {
-
         var hTags = ['H2','H2','H2','H2'];
         var hText = ['Trouvez les r\u00E9ponses aux questions les plus courantes sur les prestations et les cr\u00E9dits en ligne','Utilisez d\u2019abord nos services num\u00E9riques','Ce que vous devez savoir avant de nous appeler','Donn\u00E9es cl\u00E9s sur nos services'];
-
         if(typeof hTags != 'undefined' && hTags != null){
             for(var i = 0; i < hTags.length; i++){
                 var tags = document.querySelectorAll(hTags[i].toLowerCase());
-                
-				if(typeof tags != 'undefined' && tags != null){
+    if(typeof tags != 'undefined' && tags != null){
                     for(var j = 0; j < tags.length; j++){
                        // mws-1900 - the heading from texts contains contains text without backslash before appostraphy, where as tags returned by query selector does not contain them
                         // hence removing backslash for creating equal comparison in order to add id reference
                         if(tags[j].textContent.trim() === hText[i].replace(/\\/g, '')) {
-							if(!tags[j].id) {
-								tags[j].setAttribute('id', 'toc'+i);
-								break;
-							}
+    			if(!tags[j].id) {
+    				tags[j].setAttribute('id', 'toc'+i);
+    				break;
+    			}
                         }
                     }
                 }
             }
         }
-
     };
-
-
 </script>
-<script>_satellite.pageBottom();</script>
+<script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                showShare: false, 
+                pagedetails: false
+            });
+        </script>
+<script>
+            var defFooter = document.getElementById("def-footer");
+            defFooter.outerHTML = wet.builder.footer({
+                privacyLink: {
+                    href: "https://www.canada.ca/fr/agence-revenu/organisation/avis-confidentialite.html"
+                }, 
+                contextualFooter: {
+                    title: "Agence du revenu du Canada (ARC)", 
+                    links: [{
+                        text: "Contacter l'ARC", 
+                        href: "https://www.canada.ca/fr/agence-revenu/organisation/coordonnees.html"
+                    }, {
+                        text: "Mettre à jour vos renseignements", 
+                        href: "https://www.canada.ca/fr/agence-revenu/services/mettre-a-jour-renseignements-arc.html"
+                    }, {
+                        text: "À propos de l'ARC", 
+                        href: "https://www.canada.ca/fr/agence-revenu/organisation/a-propos-agence-revenu-canada-arc.html"
+                    }]
+                }
+            });
+        </script>
