@@ -2,7 +2,7 @@
 layout: default
 title: "Étudiants"
 description: "Renseignements pour les étudiants sur la production d'une déclaration, les revenus, les déductions et les crédits les plus communs et plus."
-subject: "Économie et industrie;Impôt"
+subject: ""
 keywords: "étudiants, étudiant, etudiant, etudiants, cours, université, post-secondaire, collège, temps plein, temps partiel, école, examen, livres, éducation, scolarité, frais, admission, montant relatif aux études, transfert, report, prêt, subvention, bourse, bourses, T2202, T2202A, TL11A, TL11B, TL11C, TL11D"
 auth:
   type: "contextual"
@@ -23,9 +23,10 @@ contextualFooter:
       url: "https://www.canada.ca/fr/agence-revenu/services/mettre-a-jour-renseignements-arc.html"
     - text: "À propos de l'ARC"
       url: "https://www.canada.ca/fr/agence-revenu/organisation/a-propos-agence-revenu-canada-arc.html"
-altLangPage: "https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/students.html"
-dateModified: 2026-05-15
-dateIssued: 2004-01-23
+robots: "index, follow"
+altLangPage: ""
+dateModified: 
+dateIssued: 
 breadcrumbs: # By default the Canada.ca crumbs is already set
   - title: "Impôts"
     link: "https://www.canada.ca/fr/services/impots.html"
@@ -37,7 +38,7 @@ feedbackData:
   section: "Étudiants"
 notedlinks:
   - title: "Étudiants"
-    link: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/segments/etudiants.html"
+    link: "http://cra-ut.isvcs.net/test/aida/test-topic-page-2026/fr/agence-revenu/services/impot/particuliers/segments/etudiants.html"
   - title: "Repository sitemap"
     link: "https://cra-proto.github.io/test-topic-page-2026/index.html"
 ---
@@ -141,5 +142,59 @@ notedlinks:
         </div>
     </div>
 </div>
+<div id="def-preFooter">
+    <!-- Write closure fall-back static file -->
+    <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_43/cdts/static/preFooter-fr.html -->
+    <!--#include virtual="/app/cls/WET/gcweb/v4_0_43/cdts/static/preFooter-fr.html" -->
+</div>
 
-<script>_satellite.pageBottom();</script>
+<script>
+            var defTop = document.getElementById("def-top");
+            defTop.outerHTML = wet.builder.top({
+                lngLinks: [{
+                    lang: "en", 
+                    href: "https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/students.html", 
+                    text: "English"
+                }], 
+                customSearch: [{
+                    action: "https://www.canada.ca/fr/agence-revenu/recherche.html", 
+                    placeholder: "ARC", 
+                    method: "get", 
+                }], 
+                auth: [{
+                    type: "contextual", 
+                    label: "Se connecter", 
+                    labelExtended: "Se connecter à l'ARC", 
+                    link: "https://www.canada.ca/fr/agence-revenu/services/services-electroniques/services-ouverture-session-arc.html"
+                }], 
+                breadcrumbs: [{ title: "Canada.ca", href: "https://www.canada.ca/fr.html" }, { title: "Impôts", href: "https://www.canada.ca/fr/services/impots.html" }, { title: "Impôt sur le revenu", href: "https://www.canada.ca/fr/services/impots/impot-sur-le-revenu.html" }, { title: "Impôt sur le revenu des particuliers", href: "https://www.canada.ca/fr/services/impots/impot-sur-le-revenu/impot-sur-le-revenu-des-particuliers.html" }]
+            });
+        </script>
+<script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                showShare: false, 
+                pagedetails: false
+            });
+        </script>
+<script>
+            var defFooter = document.getElementById("def-footer");
+            defFooter.outerHTML = wet.builder.footer({
+                privacyLink: {
+                    href: "https://www.canada.ca/fr/agence-revenu/organisation/avis-confidentialite.html"
+                }, 
+                contextualFooter: {
+                    title: "Agence du revenu du Canada (ARC)", 
+                    links: [{
+                        text: "Contacter l'ARC", 
+                        href: "https://www.canada.ca/fr/agence-revenu/organisation/coordonnees.html"
+                    }, {
+                        text: "Mettre à jour vos renseignements", 
+                        href: "https://www.canada.ca/fr/agence-revenu/services/mettre-a-jour-renseignements-arc.html"
+                    }, {
+                        text: "À propos de l'ARC", 
+                        href: "https://www.canada.ca/fr/agence-revenu/organisation/a-propos-agence-revenu-canada-arc.html"
+                    }]
+                }
+            });
+        </script>
