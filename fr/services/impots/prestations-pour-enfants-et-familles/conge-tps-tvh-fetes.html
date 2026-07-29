@@ -23,9 +23,10 @@ contextualFooter:
       url: "https://www.canada.ca/fr/agence-revenu/services/mettre-a-jour-renseignements-arc.html"
     - text: "À propos de l'ARC"
       url: "https://www.canada.ca/fr/agence-revenu/organisation/a-propos-agence-revenu-canada-arc.html"
-altLangPage: "https://www.canada.ca/en/services/taxes/child-and-family-benefits/gst-hst-holiday-tax-break.html"
-dateModified: 2025-02-18
-dateIssued: 2024-11-28
+robots: "index, follow"
+altLangPage: ""
+dateModified: 
+dateIssued: 
 breadcrumbs: # By default the Canada.ca crumbs is already set
   - title: "Impôts"
     link: "https://www.canada.ca/fr/services/impots.html"
@@ -35,7 +36,7 @@ feedbackData:
   section: "Congé de TPS/TVH - Fermé"
 notedlinks:
   - title: "Congé de TPS/TVH - Fermé"
-    link: "https://www.canada.ca/fr/services/impots/prestations-pour-enfants-et-familles/conge-tps-tvh-fetes.html"
+    link: "http://cra-ut.isvcs.net/test/aida/test-topic-page-2026/fr/services/impots/prestations-pour-enfants-et-familles/conge-tps-tvh-fetes.html"
   - title: "Repository sitemap"
     link: "https://cra-proto.github.io/test-topic-page-2026/index.html"
 ---
@@ -59,30 +60,6 @@ notedlinks:
         <li><a href="#toc4">Informations connexes</a></li>
     </ul>
 </nav>
-<script type="text/javascript">
-    //window.onload is needed otherwise it doesnot scan whole document but upto the component area only new version
-    window.onload = function() {
-        var hTags = ['H2','H2','H3','H2','H2'];
-        var hText = ['Quels types d\\\'articles \u00E9taient admissibles \u00E0 un cong\u00E9 de TPS\/TVH','Comment vous pouviez\u00A0obtenir ce cong\u00E9 de taxe sur vos achats','Si on vous a factur\u00E9e la TPS\/TVH par erreur','En tant qu\\\'entreprise qui facture la TPS\/TVH','Informations connexes'];
-        if(typeof hTags != 'undefined' && hTags != null){
-            for(var i = 0; i < hTags.length; i++){
-                var tags = document.querySelectorAll(hTags[i].toLowerCase());
-    if(typeof tags != 'undefined' && tags != null){
-                    for(var j = 0; j < tags.length; j++){
-                       // mws-1900 - the heading from texts contains contains text without backslash before appostraphy, where as tags returned by query selector does not contain them
-                        // hence removing backslash for creating equal comparison in order to add id reference
-                        if(tags[j].textContent.trim() === hText[i].replace(/\\/g, '')) {
-    			if(!tags[j].id) {
-    				tags[j].setAttribute('id', 'toc'+i);
-    				break;
-    			}
-                        }
-                    }
-                }
-            }
-        }
-    };
-</script>
 <h2>Quels types d'articles étaient admissibles à un congé de TPS/TVH</h2>
 <p><strong>Aucune TPS/TVH</strong> n’était facturée sur certains articles admissibles du 14&nbsp;décembre&nbsp;2024 au 15&nbsp;février&nbsp;2025.</p>
 <table class="table table-striped">
@@ -866,36 +843,83 @@ notedlinks:
         </ul>
     </div>
 </section>
+<div id="def-preFooter">
+    <!-- Write closure fall-back static file -->
+    <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_43/cdts/static/preFooter-fr.html -->
+    <!--#include virtual="/app/cls/WET/gcweb/v4_0_43/cdts/static/preFooter-fr.html" -->
+</div>
 
 <script>
-
+            var defTop = document.getElementById("def-top");
+            defTop.outerHTML = wet.builder.top({
+                lngLinks: [{
+                    lang: "en", 
+                    href: "https://www.canada.ca/en/services/taxes/child-and-family-benefits/gst-hst-holiday-tax-break.html", 
+                    text: "English"
+                }], 
+                customSearch: [{
+                    action: "https://www.canada.ca/fr/agence-revenu/recherche.html", 
+                    placeholder: "ARC", 
+                    method: "get", 
+                }], 
+                auth: [{
+                    type: "contextual", 
+                    label: "Se connecter", 
+                    labelExtended: "Se connecter à l'ARC", 
+                    link: "https://www.canada.ca/fr/agence-revenu/services/services-electroniques/services-ouverture-session-arc.html"
+                }], 
+                breadcrumbs: [{ title: "Canada.ca", href: "https://www.canada.ca/fr.html" }, { title: "Impôts", href: "https://www.canada.ca/fr/services/impots.html" }, { title: "Crédits d’impôt et prestations pour les particuliers", href: "https://www.canada.ca/fr/services/impots/prestations-pour-enfants-et-familles.html" }]
+            });
+        </script>
+<script>
     //window.onload is needed otherwise it doesnot scan whole document but upto the component area only new version
     window.onload = function() {
-
         var hTags = ['H2','H2','H3','H2','H2'];
         var hText = ['Quels types d\\\'articles \u00E9taient admissibles \u00E0 un cong\u00E9 de TPS\/TVH','Comment vous pouviez\u00A0obtenir ce cong\u00E9 de taxe sur vos achats','Si on vous a factur\u00E9e la TPS\/TVH par erreur','En tant qu\\\'entreprise qui facture la TPS\/TVH','Informations connexes'];
-
         if(typeof hTags != 'undefined' && hTags != null){
             for(var i = 0; i < hTags.length; i++){
                 var tags = document.querySelectorAll(hTags[i].toLowerCase());
-                
-				if(typeof tags != 'undefined' && tags != null){
+    if(typeof tags != 'undefined' && tags != null){
                     for(var j = 0; j < tags.length; j++){
                        // mws-1900 - the heading from texts contains contains text without backslash before appostraphy, where as tags returned by query selector does not contain them
                         // hence removing backslash for creating equal comparison in order to add id reference
                         if(tags[j].textContent.trim() === hText[i].replace(/\\/g, '')) {
-							if(!tags[j].id) {
-								tags[j].setAttribute('id', 'toc'+i);
-								break;
-							}
+    			if(!tags[j].id) {
+    				tags[j].setAttribute('id', 'toc'+i);
+    				break;
+    			}
                         }
                     }
                 }
             }
         }
-
     };
-
-
 </script>
-<script>_satellite.pageBottom();</script>
+<script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                showShare: false, 
+                pagedetails: false
+            });
+        </script>
+<script>
+            var defFooter = document.getElementById("def-footer");
+            defFooter.outerHTML = wet.builder.footer({
+                privacyLink: {
+                    href: "https://www.canada.ca/fr/agence-revenu/organisation/avis-confidentialite.html"
+                }, 
+                contextualFooter: {
+                    title: "Agence du revenu du Canada (ARC)", 
+                    links: [{
+                        text: "Contacter l'ARC", 
+                        href: "https://www.canada.ca/fr/agence-revenu/organisation/coordonnees.html"
+                    }, {
+                        text: "Mettre à jour vos renseignements", 
+                        href: "https://www.canada.ca/fr/agence-revenu/services/mettre-a-jour-renseignements-arc.html"
+                    }, {
+                        text: "À propos de l'ARC", 
+                        href: "https://www.canada.ca/fr/agence-revenu/organisation/a-propos-agence-revenu-canada-arc.html"
+                    }]
+                }
+            });
+        </script>
