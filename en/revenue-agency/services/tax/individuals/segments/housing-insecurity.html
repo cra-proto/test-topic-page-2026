@@ -1,5 +1,5 @@
 ---
-layout: without-h1
+layout: default
 title: "People experiencing housing insecurity and the CRA"
 description: ""
 subject: ""
@@ -9,9 +9,10 @@ auth:
   label: "Sign in"
   labelExtended: "CRA sign in"
   link: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
-altLangPage: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/segments/logement-precaire.html"
-dateModified: 2026-07-06
-dateIssued: 2025-09-10
+robots: "index, follow"
+altLangPage: ""
+dateModified: 
+dateIssued: 
 breadcrumbs: # By default the Canada.ca crumbs is already set
   - title: "Canada Revenue Agency (CRA)"
     link: "https://www.canada.ca/en/revenue-agency.html"
@@ -19,7 +20,7 @@ feedbackData:
   section: "People experiencing housing insecurity and the CRA"
 notedlinks:
   - title: "People experiencing housing insecurity and the CRA"
-    link: "https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/housing-insecurity.html"
+    link: "http://cra-ut.isvcs.net/test/aida/test-topic-page-2026/en/revenue-agency/services/tax/individuals/segments/housing-insecurity.html"
   - title: "Repository sitemap"
     link: "https://cra-proto.github.io/test-topic-page-2026/index.html"
 ---
@@ -29,7 +30,6 @@ notedlinks:
     <div class="container">
         <div class="row">
             <div class="well header-rwd mrgn-tp-lg">
-                <h1 property="name" id="wb-cont">People experiencing housing insecurity and the CRA</h1>
                 <p class="mrgn-bttm-xl">The Canada Revenue Agency (CRA) offers financial support through benefits, credits, and programs.</p>
             </div>
         </div>
@@ -569,5 +569,59 @@ notedlinks:
         <li><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/modest-income-individuals.html">Modest income individuals</a></li>
     </ul>
 </div>
+<div id="def-preFooter">
+    <!-- Write closure fall-back static file -->
+    <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_43/cdts/static/preFooter-en.html -->
+    <!--#include virtual="/app/cls/WET/gcweb/v4_0_43/cdts/static/preFooter-en.html" -->
+</div>
 
-<script>_satellite.pageBottom();</script>
+<script>
+            var defTop = document.getElementById("def-top");
+            defTop.outerHTML = wet.builder.top({
+                lngLinks: [{
+                    lang: "fr", 
+                    href: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/segments/logement-precaire.html", 
+                    text: "Français"
+                }], 
+                customSearch: [{
+                    action: "https://www.canada.ca/en/revenue-agency/search.html", 
+                    placeholder: "CRA", 
+                    method: "get", 
+                }], 
+                auth: [{
+                    type: "contextual", 
+                    label: "sign in", 
+                    labelExtended: "CRA sign in", 
+                    link: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
+                }], 
+                breadcrumbs: [{ title: "Canada.ca", href: "https://www.canada.ca/en.html" }, { title: "Canada Revenue Agency (CRA)", href: "https://www.canada.ca/en/revenue-agency.html" }]
+            });
+        </script>
+<script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                showShare: false, 
+                pagedetails: false
+            });
+        </script>
+<script>
+            var defFooter = document.getElementById("def-footer");
+            defFooter.outerHTML = wet.builder.footer({
+                privacyLink: {
+                    href: "https://www.canada.ca/en/revenue-agency/corporate/privacy-notice.html"
+                }, 
+                contextualFooter: {
+                    title: "Canada Revenue Agency (CRA)", 
+                    links: [{
+                        text: "Contact the CRA", 
+                        href: "https://www.canada.ca/en/revenue-agency/corporate/contact-information.html"
+                    }, {
+                        text: "Update your information", 
+                        href: "https://www.canada.ca/en/revenue-agency/services/update-information-cra.html"
+                    }, {
+                        text: "About the CRA", 
+                        href: "https://www.canada.ca/en/revenue-agency/corporate/about-canada-revenue-agency-cra.html"
+                    }]
+                }
+            });
+        </script>
