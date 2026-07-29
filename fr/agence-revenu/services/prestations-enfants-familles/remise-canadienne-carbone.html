@@ -2,7 +2,7 @@
 layout: without-h1
 title: "Fermée - Remise canadienne sur le carbone (RCC) pour les particuliers"
 description: "La Remise canadienne sur le carbone (RCC) est un montant non imposable versé aux particuliers et aux familles de l'Alberta, du Manitoba et de l'Ontario. Ce crédit est destiné à aider ces derniers à compenser le coût de la tarification fédérale de la pollution. Apprenez-en plus au sujet des paiements et de l'admissibilité aux RCC."
-subject: "Économie et industrie;Impôt"
+subject: ""
 keywords: "remise carbone, remboursement carbone., RCC, Remise canadienne sur le carbone, PIAC, Paiement de l’incitatif à agir pour le climat, Crédit de l’incitatif à agir pour le climat, Paiement PIAC, Admissibilité aux PIAC, IA"
 auth:
   type: "contextual"
@@ -23,10 +23,10 @@ contextualFooter:
       url: "https://www.canada.ca/fr/agence-revenu/services/mettre-a-jour-renseignements-arc.html"
     - text: "À propos de l'ARC"
       url: "https://www.canada.ca/fr/agence-revenu/organisation/a-propos-agence-revenu-canada-arc.html"
-pageclass: cnt-wdth-lmtd
-altLangPage: "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-carbon-rebate.html"
-dateModified: 2025-07-30
-dateIssued: 2026-07-14
+robots: "index, follow"
+altLangPage: ""
+dateModified: 
+dateIssued: 
 breadcrumbs: # By default the Canada.ca crumbs is already set
   - title: "Impôts"
     link: "https://www.canada.ca/fr/services/impots.html"
@@ -36,13 +36,13 @@ feedbackData:
   section: "Fermée - Remise canadienne sur le carbone (RCC) pour les particuliers"
 notedlinks:
   - title: "Fermée - Remise canadienne sur le carbone (RCC) pour les particuliers"
-    link: "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/remise-canadienne-carbone.html"
+    link: "http://cra-ut.isvcs.net/test/aida/test-topic-page-2026/fr/agence-revenu/services/prestations-enfants-familles/remise-canadienne-carbone.html"
   - title: "Repository sitemap"
     link: "https://cra-proto.github.io/test-topic-page-2026/index.html"
 ---
 
 
-<h1 property="name" id="wb-cont" class="gc-thickline">Fermée - Remise canadienne sur le carbone (RCC) pour les particuliers</h1>
+<h1 property="name" id="wb-cont" dir="ltr">Fermée - Remise canadienne sur le carbone (RCC) pour les particuliers</h1>
 <div class="row">
     <div class="col-md-8">
         <p class="small"><strong>Précédemment connue sous le nom de</strong> : Paiement de l’incitatif à agir pour le climat (PIAC)</p>
@@ -86,5 +86,59 @@ notedlinks:
         </aside>
     </div>
 </div>
+<div id="def-preFooter">
+    <!-- Write closure fall-back static file -->
+    <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_43/cdts/static/preFooter-fr.html -->
+    <!--#include virtual="/app/cls/WET/gcweb/v4_0_43/cdts/static/preFooter-fr.html" -->
+</div>
 
-<script>_satellite.pageBottom();</script>
+<script>
+            var defTop = document.getElementById("def-top");
+            defTop.outerHTML = wet.builder.top({
+                lngLinks: [{
+                    lang: "en", 
+                    href: "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-carbon-rebate.html", 
+                    text: "English"
+                }], 
+                customSearch: [{
+                    action: "https://www.canada.ca/fr/agence-revenu/recherche.html", 
+                    placeholder: "ARC", 
+                    method: "get", 
+                }], 
+                auth: [{
+                    type: "contextual", 
+                    label: "Se connecter", 
+                    labelExtended: "Se connecter à l'ARC", 
+                    link: "https://www.canada.ca/fr/agence-revenu/services/services-electroniques/services-ouverture-session-arc.html"
+                }], 
+                breadcrumbs: [{ title: "Canada.ca", href: "https://www.canada.ca/fr.html" }, { title: "Impôts", href: "https://www.canada.ca/fr/services/impots.html" }, { title: "Crédits d’impôt et prestations pour les particuliers", href: "https://www.canada.ca/fr/services/impots/prestations-pour-enfants-et-familles.html" }]
+            });
+        </script>
+<script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                showShare: false, 
+                pagedetails: false
+            });
+        </script>
+<script>
+            var defFooter = document.getElementById("def-footer");
+            defFooter.outerHTML = wet.builder.footer({
+                privacyLink: {
+                    href: "https://www.canada.ca/fr/agence-revenu/organisation/avis-confidentialite.html"
+                }, 
+                contextualFooter: {
+                    title: "Agence du revenu du Canada (ARC)", 
+                    links: [{
+                        text: "Contacter l'ARC", 
+                        href: "https://www.canada.ca/fr/agence-revenu/organisation/coordonnees.html"
+                    }, {
+                        text: "Mettre à jour vos renseignements", 
+                        href: "https://www.canada.ca/fr/agence-revenu/services/mettre-a-jour-renseignements-arc.html"
+                    }, {
+                        text: "À propos de l'ARC", 
+                        href: "https://www.canada.ca/fr/agence-revenu/organisation/a-propos-agence-revenu-canada-arc.html"
+                    }]
+                }
+            });
+        </script>
