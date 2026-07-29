@@ -2,16 +2,17 @@
 layout: default
 title: "Getting your tax benefits and credits when in an abusive situation"
 description: "If you are facing an abusive or violent situation, including economic abuse (such as restricting your access to income, benefits or tax information), the Canada Revenue Agency (CRA) is committed to helping you continue to get support."
-subject: "Economics and Industry;Taxes"
+subject: ""
 keywords: "Tax benefits, abusive situation, violent situation, getting your benefits in an abusive situation, getting your credit payments in a violent situation, applying for benefits and credits in an abusive situation, applying for benefits in a violent situation."
 auth:
   type: "contextual"
   label: "Sign in"
   labelExtended: "CRA sign in"
   link: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
-altLangPage: "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/prestations-credits-situation-abus-violence.html"
-dateModified: 2026-07-03
-dateIssued: 2021-12-07
+robots: "index, follow"
+altLangPage: ""
+dateModified: 
+dateIssued: 
 breadcrumbs: # By default the Canada.ca crumbs is already set
   - title: "Canada Revenue Agency (CRA)"
     link: "https://www.canada.ca/en/revenue-agency.html"
@@ -21,7 +22,7 @@ feedbackData:
   section: "Getting your tax benefits and credits when in an abusive situation"
 notedlinks:
   - title: "Getting your tax benefits and credits when in an abusive situation"
-    link: "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/benefits-credits-abusive-violent-situation.html"
+    link: "http://cra-ut.isvcs.net/test/aida/test-topic-page-2026/en/revenue-agency/services/child-family-benefits/benefits-credits-abusive-violent-situation.html"
   - title: "Repository sitemap"
     link: "https://cra-proto.github.io/test-topic-page-2026/index.html"
 ---
@@ -443,5 +444,59 @@ notedlinks:
         <p>You need a SIN to work in Canada and to receive benefits and services from government programs.</p>
     </div>
 </section>
+<div id="def-preFooter">
+    <!-- Write closure fall-back static file -->
+    <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_43/cdts/static/preFooter-en.html -->
+    <!--#include virtual="/app/cls/WET/gcweb/v4_0_43/cdts/static/preFooter-en.html" -->
+</div>
 
-<script>_satellite.pageBottom();</script>
+<script>
+            var defTop = document.getElementById("def-top");
+            defTop.outerHTML = wet.builder.top({
+                lngLinks: [{
+                    lang: "fr", 
+                    href: "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/prestations-credits-situation-abus-violence.html", 
+                    text: "Français"
+                }], 
+                customSearch: [{
+                    action: "https://www.canada.ca/en/revenue-agency/search.html", 
+                    placeholder: "CRA", 
+                    method: "get", 
+                }], 
+                auth: [{
+                    type: "contextual", 
+                    label: "sign in", 
+                    labelExtended: "CRA sign in", 
+                    link: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
+                }], 
+                breadcrumbs: [{ title: "Canada.ca", href: "https://www.canada.ca/en.html" }, { title: "Canada Revenue Agency (CRA)", href: "https://www.canada.ca/en/revenue-agency.html" }, { title: "Support from the CRA during difficult situations", href: "https://www.canada.ca/en/revenue-agency/services/support-difficult-situations.html" }]
+            });
+        </script>
+<script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                showShare: false, 
+                pagedetails: false
+            });
+        </script>
+<script>
+            var defFooter = document.getElementById("def-footer");
+            defFooter.outerHTML = wet.builder.footer({
+                privacyLink: {
+                    href: "https://www.canada.ca/en/revenue-agency/corporate/privacy-notice.html"
+                }, 
+                contextualFooter: {
+                    title: "Canada Revenue Agency (CRA)", 
+                    links: [{
+                        text: "Contact the CRA", 
+                        href: "https://www.canada.ca/en/revenue-agency/corporate/contact-information.html"
+                    }, {
+                        text: "Update your information", 
+                        href: "https://www.canada.ca/en/revenue-agency/services/update-information-cra.html"
+                    }, {
+                        text: "About the CRA", 
+                        href: "https://www.canada.ca/en/revenue-agency/corporate/about-canada-revenue-agency-cra.html"
+                    }]
+                }
+            });
+        </script>
