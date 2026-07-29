@@ -1,17 +1,18 @@
 ---
-layout: without-h1
+layout: default
 title: "Persons with disabilities, their caregivers, and the CRA"
 description: "These pages provide information about topics and services specifically for persons with disabilities."
-subject: "Economics and Industry;Taxes"
+subject: ""
 keywords: "disability, DTC, disability supports deduction, infirm dependants, child care expenses, caregiver amount, disability amount, disability tax credit, medical expenses, attendant care, RC4064, T2201, T929, volunteer, guide dog, Disability Tax Credit Certificate, GST, eligible dependants, individuals"
 auth:
   type: "contextual"
   label: "Sign in"
   labelExtended: "CRA sign in"
   link: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
-altLangPage: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/segments/deductions-credits-impot-personnes-handicapees.html"
-dateModified: 2026-07-06
-dateIssued: 2021-07-06
+robots: "index, follow"
+altLangPage: ""
+dateModified: 
+dateIssued: 
 breadcrumbs: # By default the Canada.ca crumbs is already set
   - title: "Taxes"
     link: "https://www.canada.ca/en/services/taxes.html"
@@ -23,7 +24,7 @@ feedbackData:
   section: "Persons with disabilities, their caregivers, and the CRA"
 notedlinks:
   - title: "Persons with disabilities, their caregivers, and the CRA"
-    link: "https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/tax-credits-deductions-persons-disabilities.html"
+    link: "http://cra-ut.isvcs.net/test/aida/test-topic-page-2026/en/revenue-agency/services/tax/individuals/segments/tax-credits-deductions-persons-disabilities.html"
   - title: "Repository sitemap"
     link: "https://cra-proto.github.io/test-topic-page-2026/index.html"
 ---
@@ -34,7 +35,6 @@ notedlinks:
         <div class="container">
             <div class="row">
                 <div class="well header-rwd mrgn-tp-lg">
-                    <h1 property="name" id="wb-cont">Persons with disabilities, their caregivers, and the CRA</h1>
                     <p class="mrgn-bttm-xl">The Canada Revenue Agency (CRA) offers financial support through benefits, credits, and programs.</p>
                 </div>
             </div>
@@ -906,5 +906,59 @@ notedlinks:
         </ul>
     </div>
 </div>
+<div id="def-preFooter">
+    <!-- Write closure fall-back static file -->
+    <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_43/cdts/static/preFooter-en.html -->
+    <!--#include virtual="/app/cls/WET/gcweb/v4_0_43/cdts/static/preFooter-en.html" -->
+</div>
 
-<script>_satellite.pageBottom();</script>
+<script>
+            var defTop = document.getElementById("def-top");
+            defTop.outerHTML = wet.builder.top({
+                lngLinks: [{
+                    lang: "fr", 
+                    href: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/segments/deductions-credits-impot-personnes-handicapees.html", 
+                    text: "Français"
+                }], 
+                customSearch: [{
+                    action: "https://www.canada.ca/en/revenue-agency/search.html", 
+                    placeholder: "CRA", 
+                    method: "get", 
+                }], 
+                auth: [{
+                    type: "contextual", 
+                    label: "sign in", 
+                    labelExtended: "CRA sign in", 
+                    link: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
+                }], 
+                breadcrumbs: [{ title: "Canada.ca", href: "https://www.canada.ca/en.html" }, { title: "Taxes", href: "https://www.canada.ca/en/services/taxes.html" }, { title: "Income tax", href: "https://www.canada.ca/en/services/taxes/income-tax.html" }, { title: "Personal income tax", href: "https://www.canada.ca/en/services/taxes/income-tax/personal-income-tax.html" }]
+            });
+        </script>
+<script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                showShare: false, 
+                pagedetails: false
+            });
+        </script>
+<script>
+            var defFooter = document.getElementById("def-footer");
+            defFooter.outerHTML = wet.builder.footer({
+                privacyLink: {
+                    href: "https://www.canada.ca/en/revenue-agency/corporate/privacy-notice.html"
+                }, 
+                contextualFooter: {
+                    title: "Canada Revenue Agency (CRA)", 
+                    links: [{
+                        text: "Contact the CRA", 
+                        href: "https://www.canada.ca/en/revenue-agency/corporate/contact-information.html"
+                    }, {
+                        text: "Update your information", 
+                        href: "https://www.canada.ca/en/revenue-agency/services/update-information-cra.html"
+                    }, {
+                        text: "About the CRA", 
+                        href: "https://www.canada.ca/en/revenue-agency/corporate/about-canada-revenue-agency-cra.html"
+                    }]
+                }
+            });
+        </script>
