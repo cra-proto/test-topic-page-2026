@@ -1,17 +1,18 @@
 ---
-layout: without-h1
+layout: default
 title: "Learn about your taxes"
 description: "Take this online course to help you learn about your personal income taxes, how to prepare to do your taxes and how to complete a basic tax return."
-subject: "Economics and Industry;Taxes;Income tax;Personal income tax"
+subject: ""
 keywords: "learn about taxes, learning taxes, understanding taxes, tax course for students, online tax course, learning about taxes, understand taxes canada, learn canadian tax system,  course for learning about taxes, tax basics"
 auth:
   type: "contextual"
   label: "Sign in"
   labelExtended: "CRA sign in"
   link: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
-altLangPage: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/programmes-educatifs.html"
-dateModified: 2026-03-13
-dateIssued: 2018-11-14
+robots: "index, follow"
+altLangPage: ""
+dateModified: 
+dateIssued: 
 breadcrumbs: # By default the Canada.ca crumbs is already set
   - title: "Taxes"
     link: "https://www.canada.ca/en/services/taxes.html"
@@ -23,7 +24,7 @@ feedbackData:
   section: "Learn about your taxes"
 notedlinks:
   - title: "Learn about your taxes"
-    link: "https://www.canada.ca/en/revenue-agency/services/tax/individuals/educational-programs.html"
+    link: "http://cra-ut.isvcs.net/test/aida/test-topic-page-2026/en/revenue-agency/services/tax/individuals/educational-programs.html"
   - title: "Repository sitemap"
     link: "https://cra-proto.github.io/test-topic-page-2026/index.html"
 ---
@@ -34,7 +35,6 @@ notedlinks:
     <div class="provisional bg-cover row mrgn-bttm-lg" data-bgimg="https://www.canada.ca/content/dam/cra-arc/serv-info/tax/individuals/edu-prgms/learn-about-taxes-banner.jpg">
         <div class="container p-0 p-sm-3">
             <div class="well header-rwd brdr-0 brdr-rds-0 opct-90 mrgn-tp-lg">
-                <h1 property="name" id="wb-cont" class="gc-thickline">Learn about your taxes</h1>
                 <p class="mrgn-tp-md">Develop an understanding of how the Canadian tax system works</p>
             </div>
         </div>
@@ -172,5 +172,59 @@ notedlinks:
         </div>
     </div>
 </div>
+<div id="def-preFooter">
+    <!-- Write closure fall-back static file -->
+    <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_43/cdts/static/preFooter-en.html -->
+    <!--#include virtual="/app/cls/WET/gcweb/v4_0_43/cdts/static/preFooter-en.html" -->
+</div>
 
-<script>_satellite.pageBottom();</script>
+<script>
+            var defTop = document.getElementById("def-top");
+            defTop.outerHTML = wet.builder.top({
+                lngLinks: [{
+                    lang: "fr", 
+                    href: "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/programmes-educatifs.html", 
+                    text: "Français"
+                }], 
+                customSearch: [{
+                    action: "https://www.canada.ca/en/revenue-agency/search.html", 
+                    placeholder: "CRA", 
+                    method: "get", 
+                }], 
+                auth: [{
+                    type: "contextual", 
+                    label: "sign in", 
+                    labelExtended: "CRA sign in", 
+                    link: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
+                }], 
+                breadcrumbs: [{ title: "Canada.ca", href: "https://www.canada.ca/en.html" }, { title: "Taxes", href: "https://www.canada.ca/en/services/taxes.html" }, { title: "Income tax", href: "https://www.canada.ca/en/services/taxes/income-tax.html" }, { title: "Personal income tax", href: "https://www.canada.ca/en/services/taxes/income-tax/personal-income-tax.html" }]
+            });
+        </script>
+<script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                showShare: false, 
+                pagedetails: false
+            });
+        </script>
+<script>
+            var defFooter = document.getElementById("def-footer");
+            defFooter.outerHTML = wet.builder.footer({
+                privacyLink: {
+                    href: "https://www.canada.ca/en/revenue-agency/corporate/privacy-notice.html"
+                }, 
+                contextualFooter: {
+                    title: "Canada Revenue Agency (CRA)", 
+                    links: [{
+                        text: "Contact the CRA", 
+                        href: "https://www.canada.ca/en/revenue-agency/corporate/contact-information.html"
+                    }, {
+                        text: "Update your information", 
+                        href: "https://www.canada.ca/en/revenue-agency/services/update-information-cra.html"
+                    }, {
+                        text: "About the CRA", 
+                        href: "https://www.canada.ca/en/revenue-agency/corporate/about-canada-revenue-agency-cra.html"
+                    }]
+                }
+            });
+        </script>
