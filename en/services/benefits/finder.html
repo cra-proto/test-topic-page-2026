@@ -1,25 +1,26 @@
 ---
-layout: without-h1
-title: "Benefits Finder | Find benefits and financial help"
+layout: default
+title: "Benefits Finder"
 description: "Find government benefits, services, and financial help you might be eligible for."
-subject: "Economics and Industry;Benefits"
+subject: ""
 keywords: "Benefits, services, government benefits, government services, business, tax, life events,"
 auth:
   type: "contextual"
   label: "Sign in"
   labelExtended: "CRA sign in"
   link: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
-altLangPage: "https://www.canada.ca/fr/services/prestations/chercheur.html"
-dateModified: 2026-04-16
-dateIssued: 2022-07-26
+robots: "index, follow"
+altLangPage: ""
+dateModified: 
+dateIssued: 
 breadcrumbs: # By default the Canada.ca crumbs is already set
   - title: "Benefits"
     link: "https://www.canada.ca/en/services/benefits.html"
 feedbackData:
-  section: "Benefits Finder | Find benefits and financial help"
+  section: "Benefits Finder"
 notedlinks:
-  - title: "Benefits Finder | Find benefits and financial help"
-    link: "https://www.canada.ca/en/services/benefits/finder.html"
+  - title: "Benefits Finder"
+    link: "http://cra-ut.isvcs.net/test/aida/test-topic-page-2026/en/services/benefits/finder.html"
   - title: "Repository sitemap"
     link: "https://cra-proto.github.io/test-topic-page-2026/index.html"
 ---
@@ -35,7 +36,6 @@ notedlinks:
 <div>
     <div class="well mrgn-bttm-0">
         <div class="container">
-            <h1 id="wb-cont" property="name">Benefits Finder</h1>
             <p>The Benefits Finder helps you find federal programs and benefits, making it easier to access financial assistance, healthcare, and other government supports and services.</p>
             <!-- <a href="https://benefitsfinder.services.gc.ca/" class="btn btn-primary">Legacy Benefits Finder</a> -->
         </div>
@@ -179,5 +179,59 @@ notedlinks:
 -->
     </div>
 </div>
+<div id="def-preFooter">
+    <!-- Write closure fall-back static file -->
+    <!-- /ROOT/etc/designs/canada/cdts/gcweb/v4_0_43/cdts/static/preFooter-en.html -->
+    <!--#include virtual="/app/cls/WET/gcweb/v4_0_43/cdts/static/preFooter-en.html" -->
+</div>
 
-<script>_satellite.pageBottom();</script>
+<script>
+            var defTop = document.getElementById("def-top");
+            defTop.outerHTML = wet.builder.top({
+                lngLinks: [{
+                    lang: "fr", 
+                    href: "https://www.canada.ca/fr/services/prestations/chercheur.html", 
+                    text: "Français"
+                }], 
+                customSearch: [{
+                    action: "https://www.canada.ca/en/revenue-agency/search.html", 
+                    placeholder: "CRA", 
+                    method: "get", 
+                }], 
+                auth: [{
+                    type: "contextual", 
+                    label: "sign in", 
+                    labelExtended: "CRA sign in", 
+                    link: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
+                }], 
+                breadcrumbs: [{ title: "Canada.ca", href: "https://www.canada.ca/en.html" }, { title: "Benefits", href: "https://www.canada.ca/en/services/benefits.html" }]
+            });
+        </script>
+<script>
+            var defPreFooter = document.getElementById("def-preFooter");
+            defPreFooter.outerHTML = wet.builder.preFooter({
+                showShare: false, 
+                pagedetails: false
+            });
+        </script>
+<script>
+            var defFooter = document.getElementById("def-footer");
+            defFooter.outerHTML = wet.builder.footer({
+                privacyLink: {
+                    href: "https://www.canada.ca/en/revenue-agency/corporate/privacy-notice.html"
+                }, 
+                contextualFooter: {
+                    title: "Canada Revenue Agency (CRA)", 
+                    links: [{
+                        text: "Contact the CRA", 
+                        href: "https://www.canada.ca/en/revenue-agency/corporate/contact-information.html"
+                    }, {
+                        text: "Update your information", 
+                        href: "https://www.canada.ca/en/revenue-agency/services/update-information-cra.html"
+                    }, {
+                        text: "About the CRA", 
+                        href: "https://www.canada.ca/en/revenue-agency/corporate/about-canada-revenue-agency-cra.html"
+                    }]
+                }
+            });
+        </script>
